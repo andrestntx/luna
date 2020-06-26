@@ -1,19 +1,19 @@
 <template>
   <div class="row">
-    <HomeIntroduction class="col s5" />
-    <div class="col s7" id="home">
+    <HomeIntroduction class="col s5 hide-on-small-only" />
+    <div class="col s12 m7" id="home">
       <Navbar />
       <Login />
       <div class="container" v-if="user.isLogged">
         <h1>Hi {{ user.info.displayName }}</h1>
-        <div class="col s12 m8 offset-m2">
+        <div class="col s12 m10 offset-m1">
           <div class="card-panel grey lighten-5 z-depth-1">
             <div class="row valign-wrapper">
-              <div class="col s2">
+              <div class="col s3 l2">
                 <img v-bind:src="user.info.photoURL" class="circle responsive-img" />
                 <!-- notice the "circle" class -->
               </div>
-              <div class="col s10">
+              <div class="col s9 l10">
                 <span class="black-text">Thanks for sign up! - This is Luna</span>
               </div>
             </div>

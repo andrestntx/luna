@@ -1,7 +1,13 @@
 <template>
   <nav>
-    <a href="#" v-if="!user.isLogged" @click="login()">Sign up</a>
-    <a href="#" v-if="user.isLogged" @click="logout()">Logout</a>
+    <div class="nav-wrapper">
+      <a href="#" v-if="!user.isLogged" @click="login()" class="right">
+        <i class="material-icons right">cloud</i>Sign up
+      </a>
+      <a href="#" v-if="user.isLogged" @click="logout()" class="right">
+        <i class="material-icons right">cloud_off</i> Logout
+      </a>
+    </div>
   </nav>
 </template>
 <script>
@@ -33,7 +39,11 @@ nav {
   a {
     margin: 0;
     color: black;
-    text-align: right;
+    font-size: 0.85em;
+    i.material-icons {
+      font-size: 1em;
+      margin-left: 5px;
+    }
   }
 }
 </style>
